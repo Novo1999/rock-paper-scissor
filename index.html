@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="text-center mt-3 maintext">Welcome to Rock,Paper,Scissors</h1>
+    <h1 class="text-center mt-3 maintext"id="fullGame">Welcome to Rock,Paper,Scissors</h1>
     <h1 id="start" class="container text-center start">Tap any button to Start</h1>
-    <div class="container text-center container-margin">
+    <div class="container text-center container-margin" id="fullGame">
       <div class="row align-items-center d-flex justify-content-between whole-box">
         <div class="col-md-4 mt-5 mt-sm-5">
           <button class="rock-color" id="btn"><img class="rock" src="images/3601910.png" alt=""></button>
@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div class="container pick">
+    <div class="container pick " id="fullGame">
       <h1>You Picked : <span id="myPick"></span> </h1>
       <h1>Computer Picked : <span id="pcPick"></span> </h1>
       <div class="container-fluid">
@@ -49,6 +49,9 @@
     </div>
     <div class="container text-center">
       <button class="resetButton" id="reset">Play Again</button>
+    </div>
+    <div class="container-fluid">
+      <h1 id="gameEndWin"></h1>
     </div>
     <script src="script.js"></script>
     <script

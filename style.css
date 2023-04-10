@@ -75,6 +75,7 @@ body{
   color: wheat;
 }
 .resetButton{
+  margin-left: 60px;
   margin-top: 10px;
   padding: 10px;
   color: aquamarine;
@@ -97,4 +98,13 @@ body{
 }
 #win{
   color: greenyellow;
+}
+#gameEndWin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  font-size: 100px;
+  color: black;
+  background-image: linear-gradient(red, yellow);
 }

@@ -2,6 +2,7 @@ document.getElementById('win').style.display = 'none';
 document.getElementById('lose').style.display = 'none';
 const Choices = ['Rock', 'Paper', 'Scissors'];
 let computerChoice;
+let counter = 0;
 function randomChoice() {
     let randomNumber = Math.floor(Math.random() * Choices.length);
     computerChoice = Choices[randomNumber];
@@ -48,6 +49,7 @@ btns.forEach(function(btn){
         playerWin('Paper', 'Rock');
         playerWin('Rock', 'Scissors');
         playerWin('Scissors', 'Paper');
+
     })
 })
 function pcWin(id1, id2){
@@ -75,9 +77,27 @@ function playerWin(id1,id2){
     document.getElementById('reset').addEventListener('click', ()=>{
         document.location.reload();
     })
-
-
-
+    document.querySelectorAll("body").forEach(elem => elem.style.display = "block");
+    btns.forEach(function(btn){
+        btn.addEventListener('click', ()=>{
+            value1 = document.querySelector('#myScore').innerHTML;
+            value2 = document.querySelector('#pcScore').innerHTML;
+            counter++;
+                console.log(counter);
+                if(counter == 5 && value1 > value2){
+                    document.querySelectorAll("#fullGame").forEach(elem => elem.style.display = "none");
+                    document.getElementById('gameEndWin').innerHTML = 'You Win'; 
+                }
+                if(counter == 5 && value1 < value2){
+                    document.querySelectorAll("#fullGame").forEach(elem => elem.style.display = "none");
+                    document.getElementById('gameEndWin').innerHTML = 'You Lose'; 
+                }
+                if(counter == 5 && value1 == value2){
+                    document.querySelectorAll("#fullGame").forEach(elem => elem.style.display = "none");
+                    document.getElementById('gameEndWin').innerHTML = `It's a Tie`;
+                }
+        })
+    })
 
 
 
