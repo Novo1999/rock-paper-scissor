@@ -8,8 +8,32 @@ body{
   color: white;
 }
 .start{
+  margin-top: 40px;
+  color: black;
+  animation: blink 10s infinite;
   padding: 10px;
   border-radius: 10px;
+  }
+  @keyframes blink {
+    0% {color: red;}
+    25% {color: lightcoral;}
+    50% {color: blue;}
+    75% {color: yellow;}
+    100% {color: chartreuse;}
+}
+.maintext{
+  color: black;
+  animation: color-change 3s infinite ease-in-out;
+  background-color: black;
+  padding: 10px;
+}
+@keyframes color-change {
+  0%, 100% {
+    background-color: red;
+  }
+  50%{
+    background-color: orange;
+  }
 }
 .rock,.paper,.scissors{
   width: 300px;
@@ -43,4 +67,7 @@ body{
 }
 #pcScore{
   color: red;
+}
+.whole-box{
+  margin-top: -80px;
 }
