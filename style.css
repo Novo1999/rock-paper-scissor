@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Alkatra", cursive;
+}
+body{
+  background-color: black;
+  color: white;
+}
+.start{
+  padding: 10px;
+  border-radius: 10px;
+}
+.rock,.paper,.scissors{
+  width: 300px;
+}
+.rock-color{
+  background-color: rgb(65, 207, 29);
+  border-radius: 10px;
+}
+.paper-color{
+  background-color: rgb(233, 15, 15);
+  border-radius: 10px;
+}
+.scissor-color{
+  background-color: rgb(212, 235, 10);
+  border-radius: 10px;
+}
+.container-margin{
+  margin-top: 100px;
+}
+.rock:hover, .paper:hover, .scissors:hover{
+  width: 250px;
+  transition: width, 0.5s;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+  transition: box-shadow, 0.4s;
+}
+.pick{
+  margin-top: 100px;
+}
