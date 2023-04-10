@@ -38,3 +38,9 @@ body{
 .pick{
   margin-top: 100px;
 }
+#myScore{
+  color: rgb(107, 238, 0);
+}
+#pcScore{
+  color: red;
+}
