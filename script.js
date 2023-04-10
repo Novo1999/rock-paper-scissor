@@ -7,18 +7,19 @@ function randomChoice() {
 let newString = '';
 const btns = document.querySelectorAll('#btn');
 function pcPick(id){
-    btns.forEach(function(btn){
-        btn.addEventListener('click', (e) =>{
-            randomChoice();
-            const clicked = e.currentTarget.classList;
-            if(clicked.contains(id)){
-                newString = `${computerChoice}`;
-                document.querySelector('#pcPick').innerHTML = newString;
-                myPick(clicked);
-            }
+        btns.forEach(function(btn){
+            btn.addEventListener('click', (e) =>{
+                randomChoice();
+                const clicked = e.currentTarget.classList;
+                if(clicked.contains(id)){
+                    newString = `${computerChoice}`;
+                    document.querySelector('#pcPick').innerHTML = newString;
+                    myPick(clicked);
+                }
+            })
         })
-    })
-}
+    }
+   
 function myPick(clicked){
     if(clicked.contains('rock-color')){
         document.querySelector('#myPick').innerHTML = `Rock`;
@@ -30,9 +31,10 @@ function myPick(clicked){
         document.querySelector('#myPick').innerHTML = `Scissors`;
     }
 }
-pcPick('rock-color');
-pcPick('paper-color');
-pcPick('scissor-color');
+    pcPick('rock-color');
+    pcPick('paper-color');
+    pcPick('scissor-color');
+
 
 btns.forEach(function(btn){
     btn.addEventListener('click', ()=>{
@@ -62,6 +64,9 @@ function playerWin(id1,id2){
         document.querySelector('#myScore').innerHTML = value1;
     }
 }
+    document.getElementById('reset').addEventListener('click', ()=>{
+        document.location.reload();
+    })
 
 // if I am rock and PC is paper,PC wins
 // if I am paper and PC is scissors,PC wins

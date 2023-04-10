@@ -10,7 +10,7 @@ body{
 .start{
   margin-top: 40px;
   color: black;
-  animation: blink 10s infinite;
+  animation: blink 8s infinite ease-in-out;
   padding: 10px;
   border-radius: 10px;
   }
@@ -71,3 +71,24 @@ body{
 .whole-box{
   margin-top: -80px;
 }
+#myPick, #pcPick{
+  color: wheat;
+}
+.resetButton{
+  margin-top: 50px;
+  padding: 10px;
+  color: aquamarine;
+  background-color: black;
+  box-shadow: white 1px 2px 2px 1px;
+  border-radius: 10px;
+}
+.resetButton:hover{
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.5);
+}
+.resetButton:active{
+  color: red;
+  transform: scale(0.8);
+  transition: transform 0.1s ease-in-out;
+}
+
