@@ -75,7 +75,7 @@ body{
   color: wheat;
 }
 .resetButton{
-  margin-top: 50px;
+  margin-top: 10px;
   padding: 10px;
   color: aquamarine;
   background-color: black;
@@ -92,3 +92,9 @@ body{
   transition: transform 0.1s ease-in-out;
 }
 
+#lose{
+  color: red;
+}
+#win{
+  color: greenyellow;
+}

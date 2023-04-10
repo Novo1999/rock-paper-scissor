@@ -1,3 +1,5 @@
+document.getElementById('win').style.display = 'none';
+document.getElementById('lose').style.display = 'none';
 const Choices = ['Rock', 'Paper', 'Scissors'];
 let computerChoice;
 function randomChoice() {
@@ -15,7 +17,9 @@ function pcPick(id){
                     newString = `${computerChoice}`;
                     document.querySelector('#pcPick').innerHTML = newString;
                     myPick(clicked);
+                    
                 }
+                document.getElementById('start').style.visibility = 'hidden';
             })
         })
     }
@@ -53,6 +57,7 @@ function pcWin(id1, id2){
     if(myPick == id1 && pcPick == id2){
         value2++;
         document.querySelector('#pcScore').innerHTML = value2;
+        document.getElementById('lose').style.display = 'block';
     }
 }
 function playerWin(id1,id2){
@@ -62,11 +67,18 @@ function playerWin(id1,id2){
     if(myPick == id1 && pcPick == id2){
         value1++;
         document.querySelector('#myScore').innerHTML = value1;
+        document.getElementById('win').style.display = 'block';
     }
 }
     document.getElementById('reset').addEventListener('click', ()=>{
         document.location.reload();
     })
+
+
+
+
+
+
 
 // if I am rock and PC is paper,PC wins
 // if I am paper and PC is scissors,PC wins

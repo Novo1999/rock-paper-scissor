@@ -21,7 +21,7 @@
   </head>
   <body>
     <h1 class="text-center mt-3 maintext">Welcome to Rock,Paper,Scissors</h1>
-    <h1 class="container text-center start">Tap any button to Start</h1>
+    <h1 id="start" class="container text-center start">Tap any button to Start</h1>
     <div class="container text-center container-margin">
       <div class="row align-items-center d-flex justify-content-between whole-box">
         <div class="col-md-4 mt-5 mt-sm-5">
@@ -38,6 +38,10 @@
     <div class="container pick">
       <h1>You Picked : <span id="myPick"></span> </h1>
       <h1>Computer Picked : <span id="pcPick"></span> </h1>
+      <div class="container-fluid">
+        <h1 class="text-center" id="win">You Win!</h1>
+        <h1 class="text-center" id="lose">You Lose!</h1>
+      </div>
     </div>
     <div class="container mt-5">
       <h1 class="float-start">Your Score : <span id="myScore">0</span></h1> 
